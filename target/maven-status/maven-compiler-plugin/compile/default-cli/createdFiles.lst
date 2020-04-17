@@ -1,0 +1,17 @@
+com/eventmanager/model/User.class
+com/eventmanager/service/EventService.class
+com/eventmanager/repository/UserRepository.class
+com/eventmanager/data/UserData.class
+com/eventmanager/controller/EventSearchController.class
+com/eventmanager/controller/EventsController.class
+com/eventmanager/service/UserService.class
+com/eventmanager/mapper/EventRequestMapperImpl.class
+com/eventmanager/SwaggerConfiguration.class
+com/eventmanager/repository/EventRepository.class
+com/eventmanager/controller/UserController.class
+com/eventmanager/data/EventData.class
+com/eventmanager/service/SolrInitializationService.class
+com/eventmanager/model/Event.class
+com/eventmanager/EventmanagerApplication.class
+com/eventmanager/exception/GlobalExceptionHandler.class
+com/eventmanager/mapper/EventRequestMapper.class
