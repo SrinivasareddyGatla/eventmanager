@@ -1,10 +1,7 @@
 package com.eventmanager.data;
 
-import java.util.Collection;
-
 public class EventData {
 
-    private Collection<UserData> users;
     private long eventId;
     private String name;
     private String description;
@@ -31,13 +28,5 @@ public class EventData {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Collection<UserData> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Collection<UserData> users) {
-        this.users = users;
     }
 }

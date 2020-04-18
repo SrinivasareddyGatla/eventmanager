@@ -1,26 +1,30 @@
 package com.eventmanager.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
-@Getter @Setter @NoArgsConstructor
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
+    @Column(unique = true)
     private String email;
-    @ManyToMany(mappedBy = "users")
-    private Collection<Event> events;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name="user2eventrel", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "event_id", referencedColumnName = "id"))
+    private List<Event> events;
 
     public long getId() {
         return id;
@@ -46,11 +50,11 @@ public class User {
         this.email = email;
     }
 
-    public Collection<Event> getEvents() {
+    public List<Event> getEvents() {
         return events;
     }
 
-    public void setEvents(Collection<Event> events) {
+    public void setEvents(List<Event> events) {
         this.events = events;
     }
 }

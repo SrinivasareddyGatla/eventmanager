@@ -1,12 +1,19 @@
 package com.eventmanager.data;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.util.List;
 
-@Getter @Setter
 public class UserData {
     private String name;
     private String email;
+    private List<EventData> events;
+
+    public List<EventData> getEvents() {
+        return events;
+    }
+
+    public void setEvents(List<EventData> events) {
+        this.events = events;
+    }
 
     public String getName() {
         return name;
