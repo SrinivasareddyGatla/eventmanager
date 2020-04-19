@@ -14,9 +14,11 @@
 	<name>eventmanager</name>
 	<description>event manager application</description>
 
+
 	<properties>
 		<java.version>1.8</java.version>
 		<org.mapstruct.version>1.3.1.Final</org.mapstruct.version>
+		<spring-data-solr.verion>1.1.0.RELEASE</spring-data-solr.verion>
 	</properties>
 
 	<dependencies>
@@ -35,6 +37,11 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-solr</artifactId>
+			<version>${spring-data-solr.verion}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.solr</groupId>

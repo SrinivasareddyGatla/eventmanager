@@ -1,2 +1,7 @@
 server:
   port: 8090
+
+logging:
+  file:
+    name: ../eventmanager_log/eventmanager.log
+

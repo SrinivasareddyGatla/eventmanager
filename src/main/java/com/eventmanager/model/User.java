@@ -18,7 +18,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
-    @Column(unique = true)
+    @Column(unique = true,nullable = false)
     private String email;
 
     @ManyToMany(cascade = CascadeType.ALL)
